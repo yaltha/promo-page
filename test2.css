@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+.promo-page {
+	display: grid;
+	/* grid-template-columns: 1fr; */
+	grid-template-rows: repeat(7, 300px);
+	grid-template-areas: 
+	"top-bg"
+	"middle"
+	"slider-img"
+	"slider-bar"
+	"tabs"
+	"weekly"
+	"terms";	
+	grid-gap: 4px;
+	background-image: none;
+	/* background-position: center top;
+	background-repeat: no-repeat; */
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+	
+	/* --------ROW1 TOP BACKGROUND */
+
+.top-bg {
+	grid-area: top-bg;
+	width: 100%;
+	height: 500px;
+	background-image: url(../Job/top-bg.png);
+}
+
+	/* --------ROW2 MIDDLE NAVIGATION-------- */
+
+.middle {
+	grid-area: middle ;
+	width: 100%;
+	height: 66px;
+	display: grid;
+	grid-template-columns: repeat(5, 196px);
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.middle button {
+	padding: 10px;
+	border: none;
+	background-color: #434343;
+	border-right: 1px solid #fff;
+	cursor: pointer;
+	font-size: 1em;
+}
+
+.middle button:last-child {
+	border-right: none;
+}
+
+.middle button a{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	transition: 0.25s;
+}
+
+.middle button:hover,
+.middle button a:hover{
+	background: #828282;
+}
+
+	/* --------ROW3 SLIDER IMAGE-------- */
+
+.slider-images {
+	position: relative;
+	grid-area: slider-img;
+	background-color: bisque;
+	width: 980px;
+	height: 300px;
+	overflow: hidden;
+}	
+
+.slider-images .slider-images-wrapper {
+	display: flex;
+}
+
+.slider-images .arrow {
+	cursor: pointer;
+}
+
+.slider-images .arrow-next {
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
+
+.slider-images .arrow-prev {
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+
+	/* --------ROW4 SLIDER BAR-------- */
+
+.slider-bar {
+	grid-area: slider-bar;
+	background-color:#ddd;
+	width: 100%;
+	height: 51px;
+	display: grid;
+	grid-template-columns: repeat(3, 326.66px);
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}	
+
+.slider-bar button {
+	border: none;
+	background-color: #f0f0f0;
+	cursor: pointer;
+}
+
+.slider-bar button a{
+	text-decoration: none;
+	color: #000;
+	text-transform: uppercase;
+	transition: 0.25s;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+.slider-bar button a:hover,
+.slider-bar button:hover {
+	text-decoration: underline;
+	background-color: #fff;
+}
+
+	/* --------ROW5 WEEKLY TAB-------- */
+.weekly-tab {
+	grid-area: tabs;
+	background-color:#ddd;
+	width: 100%;
+	height: 94px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	grid-gap: 1px;
+}	
+
+.weekly-tab button {
+	border: none;
+	background-color: #434343;
+	cursor: pointer;
+}
+
+.weekly-tab button a{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	transition: 0.25s;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.weekly-tab button a:hover,
+.weekly-tab button:hover {
+	background-color: #0d0d0d;
+}
+
+	/* --------ROW6 WEEKLY ITEMS-------- */
+.weekly-items {
+	grid-area: weekly;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background-color: #fff;
+	
+}
+
+.weekly-items .items {
+	text-align: center;
+	position: relative;
+}
+
+.weekly-items .items .discount {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	color: #fff;
+	width: 52px;
+	height: 51px;
+}
+
+.weekly-items .items .discount h3,h4 {
+	padding: 0;
+	margin: 0;
+	font-size: 1.2em;
+}
+
+.weekly-items .items .discount h4,span {
+	font-size: .8em;
+}
+
+.weekly-items .items p {
+	text-transform: uppercase;
+	font-size: 0.875em;
+	margin: 0;
+	padding: 2px;
+}
+
+.weekly-items .items p:last-child {
+	margin-top: -7px;
+	color: red;
+	font-size: 1.125em;
+}
+
+		/* ROW7 TERMS AND CONDITIONS */
+
+.terms {
+	background: url(../Job/terms-btn.png) no-repeat;
+}
+.btn-terms {
+	color: #fff;
+	cursor: pointer;
+	padding: 0 9px;
+	text-transform: uppercase;
+	border:none;
+	font-size: .8em;
+	background: none;
+}
+.btn-terms.active,
+.btn-terms:hover,
+.btn-terms:focus {
+  	background:none;
+}
+
+/* Arrows */
+.btn-terms:before {
+	content: '\23F5'; /* right arrow */
+	float: right;
+	font-size: .9em;
+	margin-left: .5em;
+}
+
+.btn-terms.active:before {
+  	content: '\23F7'; /* down arrow */
+}
+
+.terms .panel {
+	background-color: #2896a8;
+	color: #fff;
+	display: none;
+	padding: 1em;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+}
+
+.panel p {
+	font-size: .8em;
+	padding-left: 2em;
+}
+
+.panel .btn-inside {
+	background: url(../Job/linesale-btn.png) center no-repeat;
+	padding: 50px;
+}
+
+
+/* @media (max-width: 768px) {
+
+	.promo-page {
+		width: 768px;
+	}
+
+	.top-bg {
+		grid-area: top-bg;
+		background: url(../Job/top-bg-768px.png) no-repeat;
+	}
+
+	.weekly-items {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	.terms .panel {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+	}
+} */

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .top img {
+            max-width: 100%;
+            display:flex;
+            background-position: center;
+        }
+        .button{
+            color: white;
+            width: 15em;
+            padding: .5em;
+            background-color: cadetblue;
+            border: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .wrapper {
+            /* width:100%; */
+        }
+        .wrapper .panel {
+            float: left;
+            background-color: cadetblue;
+            color: white;
+            padding: 2em;
+            text-align: center;
+        }
+        .wrapper .panel p {
+            text-align: left;
+            line-height: 1.5;
+        }
+        .items {
+            /* width: 100%; */
+        }
+        .items ul {
+            padding-left: 0;
+            
+        }
+        .items ul li {
+            float: left;
+            list-style: none;
+        } 
+
+
+
+
+
+        @media screen and (max-width:800px){
+            body{
+                width:700px;
+            }
+            .items ul li {
+                width: 50%;
+                margin: 10px 0;
+                padding: 0;
+                text-align: center;
+                
+            } 
+            
+        }
+        @media screen and (max-width:500px){
+            body{
+                width:300px;
+            }
+            .button {
+                width: 15em;
+                padding: .5em;
+                font-size: .5em                
+            }
+            .wrapper {
+                width:100%;
+                margin: .5em 0;
+            }
+            .wrapper .panel {
+                padding: 1em;
+            
+            }
+            .wrapper .panel p {
+                width: 100%;
+                padding: 0em;
+                font-size: .5em;
+            }
+            .anchor-img img{
+                width: 50%;
+            }
+            
+            .items ul li {
+                width: 90%;
+                margin: 20px 5%;
+                padding: 0;
+                text-align: center;
+                
+            } 
+
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img src="/top-bg.png" alt="img">
+    </div>
+    <div class="wrapper">
+        <button class="button active">Syarat &amp; Ketentuan</button>
+        <div class="panel">
+            <p>Esse laborum labore voluptate cillum elit mollit voluptate adipisicing anim. Minim excepteur tempor consequat ullamco minim amet ullamco aliquip. Nisi mollit cupidatat minim nisi enim labore consequat qui qui nulla et velit. Ullamco eu duis pariatur non nostrud aute cupidatat magna veniam. Tempor consequat sunt consectetur laborum sunt in non occaecat voluptate ea. Amet deserunt et nisi fugiat in cillum voluptate ad laboris velit laborum fugiat in. Dolor ipsum aliquip quis in et sunt consectetur in.</p>
+            <a class="anchor-img" href="#"><img src="/linesale-btn.png" alt=""></a>
+        </div>
+    </div>
+    <div class="items">
+        <ul>
+            <li><a href="#"><img src="/item1.png" alt="items1"></a></li>
+            <li><a href="#"><img src="/item2.png" alt="items2"></a></li>
+            <li><a href="#"><img src="/item3.png" alt="items3"></a></li>
+            <li><a href="#"><img src="/item4.png" alt="items4"></a></li>
+        </ul>
+    </div>
+</body>
+</html>

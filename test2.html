@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="test.css"> -->
+    <link rel="stylesheet" href="test.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <title>PromoPage-YalthaRullist</title>
+</head>
+<body>
+    
+    <!-- <div class="promo-page"> -->
+        <div class="top-bg">
+            <img src="/top-bg.png">
+        </div>
+
+        <!---------------------- NAVIGATION ------------------------>
+        <div class="list">
+            <a class="a-btn" href="#"><button>Brand</button></a>
+            <a class="a-btn" href="#"><button>Free shipping<br>indonesia</button></a>
+            <a class="a-btn" href="#"><button>E-apotek</button></a>
+            <a class="a-btn" href="#"><button>Perfume &amp;<br>deodorant</button></a>
+            <a class="a-btn" href="#"><button>Bath &amp;<br>body care</button></a>
+        </div>
+
+        <!---------------------- SLIDER IMAGES ---------------------->
+        <div class="slider-images">
+
+            <div class="slider-images-wrapper">
+                <div class="slider-img"><img src="/slider1.png"></div>
+                <div class="slider-img"><img src="/slider2.png"></div>
+                <div class="slider-img"><img src="/slider3.png"></div>
+            </div>
+            <div class="arrow-prev"><img src="/arrow-prev.png"></div>
+            <div class="arrow-next"><img src="/arrow-next.png"></div>
+
+            <!-- <div class="arrow">
+                <div class="arrow-prev"><img src="/arrow-prev.png"></div>
+                <div class="arrow-next"><img src="/arrow-next.png"></div>
+            </div>
+            <div class="wrapper">
+                <div class="slider-img"><img src="/slider1.png"></div>
+                <div class="slider-img"><img src="/slider2.png"></div>
+                <div class="slider-img"><img src="/slider3.png"></div>
+            </div> -->
+
+        </div>
+                       
+            <!-- ----------slider-bar ------------->
+        <div class="slider-bar">
+            <a href="#" class="slider-tab"><button >Koleksi Batik Pria</button></a>
+            <a href="#" class="slider-tab"><button >Accessories &amp; Jewelry</button></a>
+            <a href="#" class="slider-tab"><button >Smart TV</button></a>
+        </div>
+       
+
+        <!---------------------- WEEKLY ---------------------->
+        <div class="weekly-tab">
+            <a href="#"><button>Weekday</button></a>
+            <a href="#"><button>Weekend</button></a>
+        </div>
+                    <!-- ----------weekly-items ------------->
+        <div class="weekly-items">
+            <div class="items">
+                <div class="discount">
+                    <h3>94<span>&percnt;</span></h3>
+                    <h4>off</h4>
+                </div>
+                <img src="/item1.png">
+                <p>Jam Tangan Wanita</p>
+                <p><strike>Rp 1.500.000</strike></p>
+                <p>Rp 92.100</p>
+            </div>
+            <div class="items">
+                <div class="discount">
+                    <h3>93<span>&percnt;</span></h3>
+                    <h4>off</h4>
+                </div>
+                <img src="/item2.png">
+                <p>Jam Tangan Pria</p>
+                <p><strike>Rp 2.500.000</strike></p>
+                <p>Rp 185.100</p>
+            </div>
+            <div class="items">
+                <div class="discount">
+                    <h3>92<span>&percnt;</span></h3>
+                    <h4>off</h4>
+                </div>
+                <img src="/item3.png">
+                <p>New Lovely Women Buckle</p>
+                <p><strike>Rp 476.000</strike></p>
+                <p>Rp 36.300</p>
+            </div>
+            <div class="items">
+                <div class="discount">
+                    <h3>91<span>&percnt;</span></h3>
+                    <h4>off</h4>
+                </div>
+                <img src="/item4.png">
+                <p>New Mens Automatic Buckle</p>
+                <p><strike>Rp 940.000</strike></p>
+                <p>Rp 82.000</p>
+            </div>
+        </div>
+
+        <!---------------------- TERMS AND CONDITIONS ---------------------->
+        <!-- <div class="terms"> -->
+            <button class="btn-terms active">Syarat &amp; Ketentuan</button>
+            <div class="panel">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>Laudantium quod labore vel vero dignissimos? <br>Magnam ducimus, quibusdam aliquam vitae eligendi veniam? <br>Eaque, rerum assumenda? Voluptates voluptatem consequuntur quas iste repudiandae.</p>
+                <a href="#"><img src="/linesale-btn.png"></a>
+            </div>
+        <!-- </div> -->
+
+        <!--------------- SCRIPT ------------->
+        <script type="text/javascript">
+
+                $(document).ready(function () {
+                    function initCollapsibles() {
+                        var collapsibleButtons$ = $(".btn-terms");
+                        collapsibleButtons$.each(function (index, ele) {
+                            var collapsible$ = $(ele),
+                                content$ = collapsible$.next(".panel");
+                            collapsible$.click(function () {
+                                collapsible$.toggleClass("active");
+                                if (!collapsible$.hasClass("active")) {
+                                        content$.slideUp();
+                                } else {
+                                    content$.slideDown();
+                                }
+                            });
+                            if (collapsible$.hasClass("active")) {
+                                content$.slideDown();
+                            }
+                        });
+                    }
+
+                initCollapsibles();
+                });
+
+            var swiper = new Swiper(".slider-images-wrapper",
+                    {
+                        nextButton: ".arrow-next",
+                        prevButton: ".arrow-prev"
+                    });
+            
+        </script>
+    <!-- </div> -->
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="test.css"> -->
+    <link rel="stylesheet" href="test2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <title>Promo-Page-Yaltha</title>
+</head>
+<body>
+    <div class="promo-page">
+
+        <!-- ----------row1 ------------->
+        <div class="top-bg">
+        </div>
+
+        <!-- ----------row2 ------------->
+        <div class="middle">
+            <button><a href="#">Brand</a></button>
+            <button><a href="#">Free shipping<br>indonesia</a></button>
+            <button><a href="#">E-apotek</a></button>
+            <button><a href="#">Perfume &amp;<br>deodorant</a></button>
+            <button><a href="#">Bath &amp;<br>body care</a></button>
+        </div>
+
+        <!-- ----------row3 ------------->
+        <div class="slider-images">
+            <div class="arrow">
+                <div class="arrow-prev"><img src="../Job/arrow-prev.png"></div>
+                <div class="arrow-next"><img src="../Job/arrow-next.png"></div>
+            </div>
+            <div class="slider-images-wrapper">
+                <div class="slider-img"><img src="../Job/slider1.png"></div>
+                <div class="slider-img"><img src="../Job/slider2.png"></div>
+                <div class="slider-img"><img src="../Job/slider3.png"></div>
+            </div>
+            
+        </div>
+
+        <!-- ----------row4 ------------->
+        <div class="slider-bar">
+            <button><a href="#">Koleksi Batik Pria</a></button>
+            <button><a href="#">Accessories &amp; Jewelry</a></button>
+            <button><a href="#">Smart TV</a></button>
+        </div>
+
+        <!-- ----------row5 ------------->
+        <div class="weekly-tab">
+            <button><a href="#">Weekday</a></button>
+            <button><a href="#">Weekend</a></button>
+        </div>
+
+        <!-- ----------row6 ------------->
+        <div class="weekly-items">
+            <div class="items">
+                <div class="discount">
+                    <h3>94<span>&percnt;</span></h3>
+                    <h4>off</h4>
+                </div>
+                <img src="../Job/item1.png">
+                <p>Jam Tangan Wanita</p>
+                <p><strike>Rp 1.500.000</strike></p>
+                <p>Rp 92.100</p>
+            </div>
+            <div class="items">
+                <div class="discount">
+                    <h3>93<span>&percnt;</span></h3>
+                    <h4>off</h4>
+                </div>
+                <img src="../Job/item2.png">
+                <p>Jam Tangan Pria</p>
+                <p><strike>Rp 2.500.000</strike></p>
+                <p>Rp 185.100</p>
+            </div>
+            <div class="items">
+                <div class="discount">
+                    <h3>92<span>&percnt;</span></h3>
+                    <h4>off</h4>
+                </div>
+                <img src="../Job/item3.png">
+                <p>New Lovely Women Buckle</p>
+                <p><strike>Rp 476.000</strike></p>
+                <p>Rp 36.300</p>
+            </div>
+            <div class="items">
+                <div class="discount">
+                    <h3>91<span>&percnt;</span></h3>
+                    <h4>off</h4>
+                </div>
+                <img src="../Job/item4.png">
+                <p>New Mens Automatic Buckle</p>
+                <p><strike>Rp 940.000</strike></p>
+                <p>Rp 82.000</p>
+            </div>
+        </div>
+
+        <!-- ----------row7 ------------->
+        <div class="terms">
+            <button class="btn-terms active">Syarat &amp; Ketentuan</button>
+            <div class="panel">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>Laudantium quod labore vel vero dignissimos? <br>Magnam ducimus, quibusdam aliquam vitae eligendi veniam? <br>Eaque, rerum assumenda? Voluptates voluptatem consequuntur quas iste repudiandae.</p>
+                <div class="btn-inside"></div>
+            </div>
+        </div>
+
+    </div>  
+
+    <!--------------- SCRIPT ------------->
+    <script type="text/javascript">
+    
+         $(document).ready(function () {
+                function initCollapsibles() {
+                    var collapsibleButtons$ = $(".btn-terms");
+                    collapsibleButtons$.each(function (index, ele) {
+                        var collapsible$ = $(ele),
+                            content$ = collapsible$.next(".panel");
+                        collapsible$.click(function () {
+                            collapsible$.toggleClass("active");
+                            if (!collapsible$.hasClass("active")) {
+                                 content$.slideUp();
+                            } else {
+                                content$.slideDown();
+                            }
+                        });
+                        if (collapsible$.hasClass("active")) {
+                            content$.slideDown();
+                        }
+                    });
+                }
+
+            initCollapsibles();
+            });
+
+        var swiper = new Swiper(".slider-images-wrapper",
+              {
+                  nextButton: ".arrow-next",
+                  prevButton: ".arrow-prev"
+              });
+        
+    </script>
+</body>
+</html>
